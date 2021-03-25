@@ -5,6 +5,7 @@
     margin: 0 auto;
     height: 768px;
     background-image: url(../images/dist/bg.png);
+    background: transparent url(../images/dist/bg.png) 50%50% / cover;
     &-content {
         width: 940px;
         margin: 0 auto;
@@ -31,6 +32,7 @@
                 letter-spacing: 5.7px;
                 margin-bottom: 0px;
                 color: #FFFFFF;
+                font-size: 36px;
             }
             p {
                 font-family: $userfont;
@@ -71,13 +73,14 @@
             text-transform: uppercase;
             font-weight: 800;
             font-family: $userfont;
+            font-size: 14px;
             span {
                 display: block;
                 width: 0; 
                 height: 0; 
                 border-left: 6.5px solid transparent;
                 border-right: 6.5px solid transparent;
-                border-bottom: 8px solid #00A4E5;;
+                border-bottom: 8px solid #00A4E5;
                 transform: rotate(-90deg);
             }
         }
@@ -87,7 +90,7 @@
             align-items: center;
             ul {
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
                 margin: auto;  
                 li {
                     list-style: none;
@@ -215,20 +218,20 @@
     width: 100%;
     max-width: 1440px;
     margin: 0 auto 115px;
-    height: 446px;
+    height: 800px;
     &-content {
         width: 940px;
         margin: 0 auto;
         height: 100%;
         position: relative;
         &--top {
-            position: absolute;
+            position: relative;
             top: 0;
             left: 0;
             display: flex;
             flex-direction: row;
             &__title {
-                text-align: left;
+                text-align: center;
                 font-family: $userfont;
                 font-weight: bold;
                 display: flex;
@@ -642,4 +645,196 @@
     line-height: 16px;
     font-size: 11px;
     margin-bottom: 15px;
+}
+
+@media (max-width:425px) {
+    .header {
+        background: transparent url(../images/dist/bg.png) 50%50% / cover;
+        &-content {
+            width: 277px;
+            &__logo {
+                left: 90px;
+            }
+            &__text {
+                left: 23px;
+                h1 {
+                    font-size: 10px;
+                }
+                p {
+                    font-size: 6px;
+                }
+            }
+        }
+    }
+    .navbar {
+        &-content {
+            width: 277px;
+            &__logo {
+                font-size: 6px;
+                span {
+                    border-left: 3px solid transparent;
+                    border-right: 3px solid transparent;
+                    border-bottom: 4px solid #00A4E5;
+                }
+            }
+            &__nav {
+                ul{
+                    li{
+                        margin-right: 21px;
+                        a{
+                            font-size: 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .about {
+        &-content{
+            width: 277px;
+            height: 100%;
+            margin: 0 auto 34px;
+            &__title {
+                left: 97px;
+                p {
+                    font-size: 11px;
+                }
+                a {
+                    width: 32px;
+                }
+            }
+            &__text {
+                left: 65px;
+                p {
+                    font-size: 9px;
+                    line-height: 12px;
+                    margin-bottom: 11px;
+                    width: 189px;
+                }
+                p:last-child { 
+                    font-size: 6px;
+                    line-height: 10px;
+                }
+            }
+            &__cards {
+                width: 207px;
+                height: 101px;
+                top: 233px;
+                left: 44px;
+                &-card {
+                    width: 60px;
+                    height: 101px;
+                    background: transparent url(../images/dist/bg.png) 50%50% / cover;
+                    p {
+                        font-size: 10px;
+                        line-height: 15px;
+                        left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .services {
+        margin-top: -80px;
+        height: 1026px;
+        &-content{
+            width: 277px;
+            &--top {
+                flex-direction: column;
+                &__title {
+                    width: 104px;
+                    margin-bottom: 10px;
+                    p {
+                        font-size: 7px;
+                        margin-bottom: 2.9px;
+                    }
+                    a {
+                        width: 14px;
+                    }
+                }
+                &__desc {
+                    line-height: 10px;
+                    font-size: 8px;
+                    margin-bottom: 10px;
+                }
+                &__btn {
+                    margin-left: 0;
+                    display: block;
+                    button {
+                        width: 60px;
+                        height: 19px;
+                        font-size: 6px;
+                    }
+                }
+            }
+            &--services {
+                flex-direction: column;
+                &__service {
+                    margin-bottom: 10px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .get {
+        background: transparent url(../images/dist/getbg.png) 50%50% / cover;
+        &-content{
+            width: 277px;
+            &__wrapper {
+                left: -8px;
+            }
+        }
+    }
+    .newsletter {
+        &-content{
+            width: 277px;
+            &_wrapper {
+                p {
+                    margin-bottom: 0;
+                    width: 92px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .footer {
+        height: 500px;
+        &-content{
+            width: 100%;
+            &__company {
+                left: 14px;
+            }
+            &__contact {
+                top: 248px;
+                left: 14px;
+            }
+            &__socials {
+                top: 251px;
+                left: 328px;
+                flex-direction: column;
+                img {
+                    margin-bottom: 20px;
+                    width: 33px;
+                    height: 33px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.form {
+    width: 279px;
+    input {
+        width: 138px;
+        padding-left: 2px;
+        &::placeholder {
+            font-size: 13px;
+        }
+    }
+    button {
+        width: 92px;
+    }
 }
